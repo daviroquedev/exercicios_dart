@@ -33,17 +33,17 @@ main() {
   dayBought.month = 11;
   dayBought.year = 2023;
 
-  // print("${birthday.day}/${birthday.month}/${birthday.year}");
-  // print("${dayBought.day}/${dayBought.month}/${dayBought.year}");
-
   String d1 = birthday.getData();
 
   print("A data é ${d1}"); 
   print("A data da compra é ${dayBought.getData()}");
 
 
-  print(dayBought); // qulquer coisa - lembrando que ele so converteu DATA no print pra uma string
-                    // porque dentro do print, ele vai chamar o toString caso nao seja uma string.
+  /**
+   * qualquer coisa - lembrando que ele so converteu DATA no print pra uma string
+   * porque dentro do print, ele vai chamar o toString caso nao seja uma string.
+   */
+  print(dayBought); 
   print(dayBought.toString()); // qualquer coisa
 
 
