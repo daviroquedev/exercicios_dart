@@ -17,15 +17,15 @@
 class Car {
   String carBrand;
   String modelCar;
-  final double maxSpeed;
+  final double topSpeed;
   double initSpeed = 0; 
   double actualSpeed = 0; 
-
-  Car({required this.carBrand, required this.modelCar, this.maxSpeed = 200});
+ 
+  Car({required this.carBrand, required this.modelCar, this.topSpeed = 200});
 
   double speedUp() {
-    if (actualSpeed + 2.3 >= maxSpeed) {
-      actualSpeed = maxSpeed;
+    if (actualSpeed + 2.3 >= topSpeed) {
+      actualSpeed = topSpeed;
     } else {
       actualSpeed += 2.3;
     }
@@ -41,12 +41,20 @@ class Car {
     return actualSpeed;
   }
 
-  bool topSpeed() {
-    return actualSpeed == maxSpeed;
+  bool isTopSpeed() {
+    if(actualSpeed == topSpeed) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  bool isStopped() {
+   return actualSpeed == 0;
   }
 
   @override
   String toString() {
-    return 'Car: $carBrand $modelCar, Max Speed: $maxSpeed';
+    return 'Car: $carBrand $modelCar, Max Speed: $topSpeed';
   }
 }
