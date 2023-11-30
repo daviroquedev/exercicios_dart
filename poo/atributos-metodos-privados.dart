@@ -44,3 +44,37 @@ class Car {
     return 'Car: $carBrand $modelCar, Max Speed: $topSpeed';
   }
 }
+
+
+class Aluno {
+  String name = "Joao";
+  int id;
+  int idade;
+  int _matricula = 0;
+  String? cidade;
+
+  Aluno({required this.name, required this.id, required this.idade, this.cidade = 'Fortaleza'});
+
+  // metodo get para deixar imutavel 
+  int get matricula {
+    return this._matricula;
+  }
+
+
+  // metodo set para mudar
+  set matricula(int novaMatricula){
+    bool difValida = (_matricula - novaMatricula).abs() >= 1;
+    
+    if(difValida) {
+      this._matricula  = novaMatricula;
+    }
+    
+  }
+
+
+  @override
+  String toString() {
+    return '$name, $id, $idade, $cidade';
+  }
+
+}
