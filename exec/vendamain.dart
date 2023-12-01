@@ -1,7 +1,7 @@
-import './model/venda.dart';
-import 'model/client.dart';
-import 'model/venda_item.dart';
-import 'model/produto.dart';
+import '../model/venda.dart';
+import '../model/client.dart';
+import '../model/venda_item.dart';
+import '../model/produto.dart';
 main() {
   var venda = Venda(
     cliente: Cliente(
